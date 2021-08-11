@@ -2,20 +2,22 @@ package com.prac.mediumPract;
 
 public class ZerosInNFactorial {
     public static void main(String[] args) {
-        int number = 120;
+        int number = 12;
         // count trailing zeros in the number factorial.i.e 120!
         ZerosInNFactorial obj = new ZerosInNFactorial();
-        //int count = obj.countOfZeroNew(number);
-        int count = obj.countOfZero(number);
-        System.out.println(count+" : number of Zeros in"+ number +" factorial");
+        int count = obj.countOfZeroNew(number);
+        int count2 = obj.countOfZero(number);
+        System.out.println(count+" : number of Zeros in (new)"+ number +" factorial");
+        System.out.println(count2+" : number of Zeros in (old)"+ number +" factorial");
     }
     public int countOfZero(int num){
         int count = 0;
         for(int i = 2; i <= num; i++){
             int cnt = 0;
-            while(i % 5 == 0){
+            int factor = i;
+            while(factor % 5 == 0){
                 cnt++;
-                i = i / 5;
+                factor = factor / 5;
             }
             count += cnt;
         }

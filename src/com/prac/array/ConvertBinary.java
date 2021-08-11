@@ -32,9 +32,9 @@ public class ConvertBinary {
             st.push("1");
             return;
         }
-        if(num%2 == 0) st.push("0");
+        if(num % 2 == 0) st.push("0");
         else st.push("1");
-        binaryConverted(num/2,st);
+        binaryConverted(num / 2, st);
     }
 
 }

@@ -35,15 +35,15 @@ public class PermutationString {
         if(string1.length()!= string2.length()) return false;
         Map<String,Integer> map1 = new HashMap<>();
         Map<String,Integer> map2 = new HashMap<>();
-        for(int i=0;i<string1.length();i++){
-            map1.put(String.valueOf(string1.charAt(i)),(map1.getOrDefault(String.valueOf(string1.charAt(i)),0))+1);
+        for(int i = 0; i < string1.length(); i++){
+            map1.put(String.valueOf(string1.charAt(i)), (map1.getOrDefault(String.valueOf(string1.charAt(i)),0)) + 1);
         }
-        for(int j=0;j<string2.length();j++){
-            map2.put(String.valueOf(string2.charAt(j)),(map2.getOrDefault(String.valueOf(string2.charAt(j)),0))+1);
+        for(int j = 0; j < string2.length(); j++){
+            map2.put(String.valueOf(string2.charAt(j)), (map2.getOrDefault(String.valueOf(string2.charAt(j)),0)) + 1);
         }
         map1.forEach((k,v)-> System.out.println(k+" "+v));
         map2.forEach((k,v)-> System.out.println(k+" "+v));
-        int countOfTrueSequence=0;
+        int countOfTrueSequence = 0;
         for(Map.Entry<String, Integer> mp : map1.entrySet()){
             if (map2.containsKey(mp.getKey())) {
                 if(map2.get(mp.getKey()) == mp.getValue()) {
@@ -84,11 +84,11 @@ public class PermutationString {
         int sumAskeyString1 = 0;
         int sumAskeyString2 = 0;
 
-        for(int i =0; i< string1.length();i++){
-            sumAskeyString1+=(int)string1.charAt(i);
+        for(int i = 0; i < string1.length(); i++){
+            sumAskeyString1 += (int)string1.charAt(i);
         }
-        for(int j =0; j< string1.length();j++){
-            sumAskeyString2+=(int)string2.charAt(j);
+        for(int j = 0; j < string1.length(); j++){
+            sumAskeyString2 += (int)string2.charAt(j);
         }
         if(sumAskeyString1 == sumAskeyString2) return true;
         else return false;

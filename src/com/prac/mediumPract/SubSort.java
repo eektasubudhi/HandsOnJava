@@ -12,7 +12,7 @@ public class SubSort {
         int rightMax = Integer.MAX_VALUE;
         int rightMin = 0;
 
-        for(int i = 0; i<arr.length; i++){
+        for(int i = 0; i < arr.length; i++){
             if(arr[i] < leftMin) leftMax = i;
             else leftMin = arr[i];
         }

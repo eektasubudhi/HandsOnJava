@@ -21,10 +21,10 @@ public class StringCompress {
         */
     }
     public static String compressString(String s){
-        int count=1;
+        int count = 1;
         char lastChar = s.charAt(0);
         StringBuilder sd = new StringBuilder();
-        if(s.length()==0) return "no string available";
+        if(s.length() == 0) return "no string available";
         for(int i = 1; i < s.length(); i++){
             if(s.charAt(i) == lastChar){
                 count++;

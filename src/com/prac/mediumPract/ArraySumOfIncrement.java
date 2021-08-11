@@ -7,8 +7,8 @@ public class ArraySumOfIncrement {
     public static int index = 0;
 
     public static void main(String[] args) {
-        int[] arr = {2,7,1,9,5,5,2,1,2}; // add same number of elements as its index
-        // output - 2, (7+1=)8, (9+5+5=)19, (remaining 2+1+2=)5
+        int[] arr = {2, 7, 1, 9, 5, 5, 2, 1, 2}; // add same number of elements as its iteration.
+        // output - 2, (7 + 1 =) 8, (9 + 5 + 5 = ) 19, (remaining 2 + 1 + 2 = )5
         List<Integer> res = sumOfSeries(arr);
         for (int i : res) System.out.println(i);
     }

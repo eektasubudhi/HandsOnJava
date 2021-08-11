@@ -9,7 +9,7 @@ public class StringPermutationsWithDups {
         ArrayList<String> result = new ArrayList<>();
         HashMap<Character, Integer> map = new HashMap<>();
         for(char c : permutation.toCharArray()){
-            map.put(c,map.getOrDefault(c,0)+1);
+            map.put(c, map.getOrDefault(c,0) + 1);
         }
         permutationOfTheString("", map, permutation.length(), result);
         for (String s : result) System.out.println(s);

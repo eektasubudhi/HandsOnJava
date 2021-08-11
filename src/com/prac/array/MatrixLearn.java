@@ -7,7 +7,7 @@ public class MatrixLearn {
     //3. given position -> print neighboring elements
     //4. find an element (position i,j)
     public static void main(String[] args) {
-        int count=1;
+        int count = 1;
         int[][] a = new int[4][4];
         for(int row = 0; row < a.length; row++){
             for(int col = 0; col < a[0].length; col++){

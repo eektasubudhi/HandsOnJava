@@ -27,22 +27,22 @@ public class FindPairValues {
         a-b = (sum1-sum2)/2
 
          */
-        int[] res1 = givePairs(arr1,arr2);
+        int[] res1 = givePairs(arr1, arr2);
         for(int a: res1) System.out.println(a);
 
-        int[] res2 =givePairsOptimized(arr1,arr2);
-        for(int a: res2) System.out.println(a);
+        int[] res2 = givePairsOptimized(arr1, arr2);
+        for(int a : res2) System.out.println(a);
 
     }
     public static int[] givePairsOptimized(int[] arr1, int[] arr2){
         int[] result1 = new int[2];
         int sum1 = 0;
         int sum2 = 0;
-        for(int i: arr1) sum1+=i;
-        for(int i: arr2) sum2+=i;
-        int arr1Counter=0;
-        int exprsn = (sum1-sum2)/2;
-        //a-b = exprsn
+        for(int i : arr1) sum1+=i;
+        for(int i : arr2) sum2+=i;
+        int arr1Counter = 0;
+        int exprsn = (sum1 - sum2) / 2;
+        //a - b = exprsn
 
         return result1;
     }
@@ -50,14 +50,14 @@ public class FindPairValues {
         int[] result = new int[2];
         int sum1 = 0;
         int sum2 = 0;
-        for(int i: arr1) sum1+=i;
-        for(int i: arr2) sum2+=i;
-        int exprsn = (sum1-sum2)/2;
-        for(int j=0; j<arr1.length; j++){
-            for(int k=0; k<arr2.length; k++){
-                if(arr1[j]-arr2[k] == exprsn){
-                    result[0]=arr1[j];
-                    result[1]=arr2[k];
+        for(int i : arr1) sum1 += i;
+        for(int i : arr2) sum2 += i;
+        int exprsn = (sum1 - sum2) / 2;
+        for(int j = 0; j < arr1.length; j++){
+            for(int k = 0; k < arr2.length; k++){
+                if(arr1[j] - arr2[k] == exprsn){
+                    result[0] = arr1[j];
+                    result[1] = arr2[k];
                 }
             }
         }

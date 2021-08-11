@@ -13,7 +13,7 @@ public class BinarySearch {
     }
     public static int binarySearchFun(int[] bin, int find, int high, int low){
         int mid = (high+low)/2;
-        if(high<low) return -1;
+        if(high < low) return -1;
         if(low == high) {
             if(find == bin[low]) return low;
             else return -1;

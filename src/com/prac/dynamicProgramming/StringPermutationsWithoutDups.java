@@ -15,10 +15,10 @@ public class StringPermutationsWithoutDups {
             result.add(prefix);
         }
         for(int i = 0; i < permutation.length(); i++){
-            String before = permutation.substring(0,i);
-            String after = permutation.substring(i+1, permutation.length());
+            String before = permutation.substring(0, i);
+            String after = permutation.substring(i + 1, permutation.length());
             char c = permutation.charAt(i);
-            permutationOfTheString(prefix+c, before+after, result);
+            permutationOfTheString(prefix + c, before + after, result);
         }
     }
 }

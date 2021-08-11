@@ -14,7 +14,7 @@ public class RobotInABound {
         // facing north
         int idx = 0;
 
-        for (char i : instruction.toCharArray()) {
+       for (char i : instruction.toCharArray()) {
             if (i == 'L')
                 idx = (idx + 3) % 4;
             else if (i == 'R')

@@ -18,37 +18,37 @@ public class EvaluateExpression {
         System.out.println(result);
     }
     static int calculate(String calcString) {
-        int sum =0;
+        int sum = 0;
         Stack<Integer> st = new Stack<>();
         StringBuilder sd = new StringBuilder();
         char currentOperator = '+';
-        for(int i=0; i<calcString.length();i++){
+        for(int i = 0; i < calcString.length(); i++){
             if(Character.isDigit(calcString.charAt(i))){
                 sd.append(calcString.charAt(i));
             }
             if(calcString.charAt(i)!=' ' && !Character.isDigit(calcString.charAt(i)) || i == calcString.length()-1){
-                if(currentOperator=='/'){
-                    st.push(st.pop()/Integer.valueOf(sd.toString()));
+                if(currentOperator == '/'){
+                    st.push(st.pop() / Integer.valueOf(sd.toString()));
                     sd = new StringBuilder();
                 }
-                else if(currentOperator=='*'){
-                    st.push(st.pop()*Integer.valueOf(sd.toString()));
+                else if(currentOperator == '*'){
+                    st.push(st.pop() * Integer.valueOf(sd.toString()));
                     sd = new StringBuilder();
                 }
-                else if(currentOperator=='+'){
+                else if(currentOperator == '+'){
                     st.push(Integer.valueOf(sd.toString()));
                     sd = new StringBuilder();
                 }
-                else if(currentOperator=='-'){
-                    st.push(-Integer.valueOf(sd.toString()));
+                else if(currentOperator == '-'){
+                    st.push(- Integer.valueOf(sd.toString()));
                     sd = new StringBuilder();
                 }
 
-                currentOperator= calcString.charAt(i);
+                currentOperator = calcString.charAt(i);
             }
         }
         while(!st.isEmpty()){
-            sum+=st.pop();
+            sum += st.pop();
         }
         return sum;
     }

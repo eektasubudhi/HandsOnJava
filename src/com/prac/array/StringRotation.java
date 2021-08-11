@@ -10,7 +10,7 @@ public class StringRotation {
     }
     public static boolean isSubstring(String s1, String s2){
         if(s2.length() != s1.length()) return false;
-        String s3 = s1+s1;
+        String s3 = s1 + s1;
         if(s3.contains(s2)) return true;
 
         return false;

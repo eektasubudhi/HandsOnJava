@@ -14,16 +14,16 @@ public class PermutationOfPalindrome {
 
         String input = "tact coa";
 
-        boolean result = isPermutaionOfThePalindrome(input);
-        System.out.println(result+" :result");
+        boolean result = isPermutationOfThePalindrome(input);
+        System.out.println(result + " :result");
 
     }
-    public static boolean isPermutaionOfThePalindrome(String input){
+    public static boolean isPermutationOfThePalindrome(String input){
         Map<Character,Integer> mp = new HashMap<>();
-        int oddCount=0;
-        for(int i =0; i< input.length(); i++){
-            if(input.charAt(i)!=' '){
-                mp.put(input.charAt(i),mp.getOrDefault(input.charAt(i),0)+1);
+        int oddCount = 0;
+        for(int i = 0; i < input.length(); i++){
+            if(input.charAt(i) != ' '){
+                mp.put(input.charAt(i), mp.getOrDefault(input.charAt(i),0) + 1);
             }
         }
         //mp.forEach((k,v)-> System.out.println(k+ " : " +v));
@@ -31,7 +31,7 @@ public class PermutationOfPalindrome {
             System.out.println(entry.getKey()+" : "+entry.getValue());
         }
         for (Map.Entry<Character,Integer> entry : mp.entrySet())
-            if(entry.getValue()%2 !=0)
+            if(entry.getValue() % 2 != 0)
                 oddCount++;
         System.out.println(oddCount);
         if (oddCount > 1) return false;

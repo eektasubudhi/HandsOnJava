@@ -16,7 +16,7 @@ public class SortArrayByFrequency {
         List<Integer> output = new ArrayList<>();
         for(int i : arr){
             int val = mp.getOrDefault(i, 0);
-            mp.put(i, val+1);
+            mp.put(i, val + 1);
             output.add(i);
         }
         SortComparator sq = new SortComparator(mp);

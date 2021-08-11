@@ -19,20 +19,20 @@ public class Calculator {
             if(Character.isDigit(calculate.charAt(i))){
                 sd.append(calculate.charAt(i));
             }
-            if(calculate.charAt(i) != ' ' && !Character.isDigit(calculate.charAt(i)) || i == calculate.length()-1){
-                if(currentOperator =='/'){
+            if(calculate.charAt(i) != ' ' && !Character.isDigit(calculate.charAt(i)) || i == calculate.length() - 1){
+                if(currentOperator == '/'){
                     st.push(st.pop()/Integer.valueOf(sd.toString()));
                     sd = new StringBuilder();
                 }
-                else if(currentOperator =='*'){
+                else if(currentOperator == '*'){
                     st.push(st.pop()*Integer.valueOf(sd.toString()));
                     sd = new StringBuilder();
                 }
-                else if(currentOperator =='+'){
+                else if(currentOperator == '+'){
                     st.push(Integer.valueOf(sd.toString()));
                     sd = new StringBuilder();
                 }
-                else if(currentOperator =='-'){
+                else if(currentOperator == '-'){
                     st.push(-Integer.valueOf(sd.toString()));
                     sd = new StringBuilder();
                 }
@@ -40,7 +40,7 @@ public class Calculator {
             }
         }
         while (!st.isEmpty()){
-            sum +=st.pop();
+            sum += st.pop();
         }
         return sum;
     }

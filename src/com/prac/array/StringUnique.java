@@ -16,7 +16,7 @@ public class StringUnique {
     public static boolean isUnique(String input){
         for(int i=0; i<input.length();i++){
             for(int j=i+1; j<input.length();j++){
-                if(Character.toLowerCase(input.charAt(i))==Character.toLowerCase(input.charAt(j))) return false;
+                if(Character.toLowerCase(input.charAt(i)) == Character.toLowerCase(input.charAt(j))) return false;
             }
         }
         return true;

@@ -11,7 +11,7 @@ public class PartitionArrayWithLessAndGreater {
     }
     public static int[] partition(int[] arr, int val){
         int flag = 0;
-        for(int i = 0; i < arr.length;i++){
+        for(int i = 0; i < arr.length; i++){
             if (arr[i] < val) {
                 int temp = arr[i];
                 arr[i] = arr[flag];

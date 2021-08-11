@@ -8,7 +8,7 @@ public class SkipArray {
     public int[] sumFound(int[] numbers, int num){
         int[] minusArr = new int[numbers.length];
         int[] fin = new int[2];
-        for(int i=0;i<numbers.length;i++){
+        for(int i = 0; i < numbers.length; i++){
             int temp = num - numbers[i];
             minusArr[i] = temp;
         }
@@ -16,10 +16,10 @@ public class SkipArray {
         for(int a : numbers){
             mySet.add(a);
         }
-        int count=0;
+        int count = 0;
         for(int b: minusArr){
             if(mySet.contains(b)){
-                fin[count++]= b;
+                fin[count++] = b;
             }
         }
         for(int a : fin){
@@ -30,7 +30,7 @@ public class SkipArray {
     public static void main(String[] args){
         //System.out.println("Hello Eekta");
         SkipArray s = new SkipArray();
-        int[] numbers = {1,2,4,3,5};
-        s.sumFound(numbers, 9); // pairs of number equal to given same
+        int[] numbers = {1, 2, 4, 3, 5};
+        s.sumFound(numbers, 9); // pairs of number equal to given same.
     }
 }

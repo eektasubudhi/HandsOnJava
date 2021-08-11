@@ -9,7 +9,7 @@ public class InsertionSort {
             int pointer = i-1;
             while(pointer>=0 && key<arr[pointer]) {
                 //arr[i], arr[pointer]
-                temp =arr[pointer];
+                temp = arr[pointer];
                 arr[pointer]=arr[pointer+1];
                 arr[pointer+1]=temp;
                 pointer--;
