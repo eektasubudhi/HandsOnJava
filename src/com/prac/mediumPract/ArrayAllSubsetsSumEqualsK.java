@@ -47,7 +47,7 @@ public class ArrayAllSubsetsSumEqualsK {
         Map<Integer, Integer> mp = new HashMap<>();
         int sum = 0;
         mp.put(0,1); // {1, 1, 2, 3}
-        for(int i = 0; i< arr.length; i++){
+        for(int i = 0; i < arr.length; i++){
             sum += arr[i];
             if(mp.containsKey(sum - k)) {
                 countSubset += mp.get(sum - k);

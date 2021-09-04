@@ -43,6 +43,7 @@ public class NumberOfIsland {
             isVisited[row][col + 1] = true;
             dfsNbr(grid, isVisited, row, col + 1);
         }
+        // for diagonals:
         if(row > 0 && col > 0 && grid[row - 1][col - 1] == 1 && (!isVisited[row - 1][col - 1])){
             isVisited[row - 1][col - 1] = true;
             dfsNbr(grid, isVisited, row - 1, col - 1);

@@ -22,20 +22,17 @@ public class Calculator {
             if(calculate.charAt(i) != ' ' && !Character.isDigit(calculate.charAt(i)) || i == calculate.length() - 1){
                 if(currentOperator == '/'){
                     st.push(st.pop()/Integer.valueOf(sd.toString()));
-                    sd = new StringBuilder();
                 }
                 else if(currentOperator == '*'){
                     st.push(st.pop()*Integer.valueOf(sd.toString()));
-                    sd = new StringBuilder();
                 }
                 else if(currentOperator == '+'){
                     st.push(Integer.valueOf(sd.toString()));
-                    sd = new StringBuilder();
                 }
                 else if(currentOperator == '-'){
                     st.push(-Integer.valueOf(sd.toString()));
-                    sd = new StringBuilder();
                 }
+                sd = new StringBuilder();
                 currentOperator = calculate.charAt(i);
             }
         }

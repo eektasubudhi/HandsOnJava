@@ -23,12 +23,12 @@ public class SumSwap {
             hs2.add(i);
             sum2 += i;
         }
-        int target = (sum1 - sum2)/2;
+        int target = (sum1 - sum2) / 2;
 
         for (Integer a : hs1){
             int find = Math.abs(target - a);
             if(hs2.contains(find)) {
-                System.out.println("a: "+a+" b: "+find);
+                System.out.println("a: " + a + " b: " + find);
             }
         }
     }

@@ -7,8 +7,8 @@ public class ZerosInNFactorial {
         ZerosInNFactorial obj = new ZerosInNFactorial();
         int count = obj.countOfZeroNew(number);
         int count2 = obj.countOfZero(number);
-        System.out.println(count+" : number of Zeros in (new)"+ number +" factorial");
-        System.out.println(count2+" : number of Zeros in (old)"+ number +" factorial");
+        System.out.println(count + " : number of Zeros in (new)" + number + " factorial");
+        System.out.println(count2 + " : number of Zeros in (old)" + number + " factorial");
     }
     public int countOfZero(int num){
         int count = 0;

@@ -7,10 +7,10 @@ import java.util.Map;
 public class WordFrequency {
     public static void main(String[] args){
         WordFrequency object = new WordFrequency();
-        String book = "Once there was a girl, whose name was Eekta. The girl was fair and tall. She was very kind hearted and humble. " +
+        /*String book = "Once there was a girl, whose name was Eekta. The girl was fair and tall. She was very kind hearted and humble. " +
                 "The girl had a constant aim to succeed in her career by getting a good job in a big company. Finally she " +
-                "got what she wanted. Then the girl got married and lived happily forever.";
-        //String book = "Hello girl. The girl the fat. The girl is fat";
+                "got what she wanted. Then the girl got married and lived happily forever.";*/
+        String book = "Hello girl. The girl the fat. The girl is fat";
         String word = "girl";
         int resultCount = object.frequencyOfTheWord(book, word);
         System.out.println("Frequency : "+resultCount);
@@ -43,7 +43,6 @@ public class WordFrequency {
                 return flag;
             }
         }
-
         return flag;
     }
 }

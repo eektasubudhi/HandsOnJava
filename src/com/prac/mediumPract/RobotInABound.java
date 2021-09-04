@@ -2,7 +2,7 @@ package com.prac.mediumPract;
 
 public class RobotInABound {
     public static void main(String[] args) {
-        String instruction = "GGLLGG";
+        String instruction = "GG";
         boolean res = findPathsOfRobot(instruction);
         System.out.println(res);
     }
@@ -28,6 +28,8 @@ public class RobotInABound {
         // after one cycle:
         // robot returns into initial position
         // or robot doesn't face north
-        return (x == 0 && y == 0) || (idx != 0);
+
+        if ((x == 0 && y == 0) || (idx != 0)) return true;
+        return false;
     }
 }
