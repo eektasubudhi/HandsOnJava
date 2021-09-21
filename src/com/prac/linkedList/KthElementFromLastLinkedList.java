@@ -58,7 +58,7 @@ public class KthElementFromLastLinkedList {
     static void findKthElementFromLastRecur(Node head, int k){
         int count = 0;
         Node last = FromLastRecur(head.next);
-        while (last!=null){
+        while (last != null){
             if(k == count) System.out.println("Element in rec is: "+ last.data);
             last = last.next;
             count++;

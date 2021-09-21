@@ -37,7 +37,7 @@ public class PartitionLinkedList {
         Node right = new Node(-1);
         Node resRight = right;
 
-        while(head!=null){
+        while(head != null){
             if(head.data == val || head.data < val){
                 Node n = new Node(head.data);
                 left.next = n;
@@ -50,7 +50,7 @@ public class PartitionLinkedList {
             }
             head = head.next;
         }
-        while (resLeft!=null && resLeft.next != null){
+        while (resLeft != null && resLeft.next != null){
             resLeft = resLeft.next;
             System.out.println(resLeft.data);
         }

@@ -31,8 +31,8 @@ public class UnsortedLinkedListRemoveDuplicate {
         head.next.next.next.next.next = n6;
 
         System.out.println("-------------");
-        //removeDuplicates(head);
-        removeDuplicates1(head);
+        removeDuplicates(head);
+        //removeDuplicates1(head);
         while(head!=null){
             System.out.println(head.data+" ");
             head = head.next;

@@ -26,12 +26,12 @@ public class CheckIsLinkedListPalindrome {
         nodeB.next=nodeC;
         nodeC.next=nodeD;
         nodeD.next=nodeE;
-        boolean n = isLinkedlistPalindromeNaive(nodeA);
+        boolean n = isLinkedListPalindromeNaive(nodeA);
         System.out.println(n+" : Naive");
-        boolean o = isLinkedlistPalindromeOptimal(nodeA);
+        boolean o = isLinkedListPalindromeOptimal(nodeA);
         System.out.println(o+" : Optimal");
     }
-    public static boolean isLinkedlistPalindromeNaive(Node headnode){
+    public static boolean isLinkedListPalindromeNaive(Node headnode){
             /*
             [10|]->[11|]->[12|]->[11|]->[10|]
              */
@@ -55,7 +55,7 @@ public class CheckIsLinkedListPalindrome {
             }
            return isPalindrome;
     }
-    public static boolean isLinkedlistPalindromeOptimal(Node headnode){
+    public static boolean isLinkedListPalindromeOptimal(Node headnode){
             /*
             [1]->[4]->[2]->[2]->[4]->[1]
             [1]->[4]->[4]->[1]

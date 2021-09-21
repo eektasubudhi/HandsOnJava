@@ -8,7 +8,7 @@ public class ArrayAllSubsetsSumEqualsK {
     static int countSubset = 0;
 
     public static void main(String[] args) {
-        int arr[] = {1,-1,0};
+        int arr[] = {1, -1, 0};
         int k = 0; // output - 2
         //input - {0, 1, 2, 3, 4, 5}, 5 output -2
         //int count = countOfSubsetSumEqualK(arr, k);

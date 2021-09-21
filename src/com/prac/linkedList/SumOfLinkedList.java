@@ -40,34 +40,34 @@ public class SumOfLinkedList {
 
     }
     public static Node sumTheList(Node head1, Node head2){
-
         int count = 1;
         int sumHead1 = 0;
         int sumHead2 = 0;
         int resSum = 0;
+
         while(head1 != null){
-            sumHead1 = sumHead1+head1.data*count;
-            count = count*10;
+            sumHead1 = sumHead1 + head1.data * count;
+            count = count * 10;
             head1 = head1.next;
         }
-        System.out.println(sumHead1+" : sum head1");
+        System.out.println(sumHead1 + " : sum head1");
         count = 1;
         while(head2 != null){
-            sumHead2 = sumHead2+head2.data*count;
-            count = count*10;
+            sumHead2 = sumHead2 + head2.data * count;
+            count = count * 10;
             head2 = head2.next;
         }
-        System.out.println(sumHead2+" : sum head2");
+        System.out.println(sumHead2 + " : sum head2");
 
-        resSum = sumHead1+sumHead2;
+        resSum = sumHead1 + sumHead2;
         System.out.println(resSum+" : final sum");
 
         Node res = new Node(Integer.MIN_VALUE);
         Node head = res;
 
         while (resSum>0){
-            int dig = resSum%10;
-            resSum = resSum/10;
+            int dig = resSum % 10;
+            resSum = resSum / 10;
             Node newN = new Node(dig);
             res.next = newN;
             res = res.next;
