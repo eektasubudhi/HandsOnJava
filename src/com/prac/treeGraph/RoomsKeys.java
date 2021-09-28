@@ -9,10 +9,10 @@ public class RoomsKeys {
         List<List<Integer>> rooms = new ArrayList<>();
         List<Integer> l = new ArrayList<>();
         l.add(1);
-       // l.add(3);
+        //l.add(3);
         List<Integer> l2 = new ArrayList<>();
         l2.add(2);
-       // l2.add(0);
+        //l2.add(0);
         //l2.add(1);
         List<Integer> l3 = new ArrayList<>();
         l3.add(3);
@@ -35,6 +35,7 @@ public class RoomsKeys {
         }
         return true;
     }
+
     public void dfs(List<List<Integer>> rooms, int[] visited, int row){
         if(visited[row] == 0){
             visited[row] = 1;

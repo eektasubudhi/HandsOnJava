@@ -33,11 +33,11 @@ public class WordSearch {
         }
         visited[row][col] = true;
         /*
-        if (search(row-1, col,board, visited, word, currentLetterIndex+1) ||
-        search(row, col-1,board, visited, word,currentLetterIndex+1) ||
-        search(row+1, col,board, visited, word,currentLetterIndex+1) ||
-        search(row, col+1,board, visited, word,currentLetterIndex+1)){
-          return true;
+        if (backTrack(row - 1, col, board, visited, word, index + 1) ||
+        backTrack(row, col - 1, board, visited, word, index + 1) ||
+        backTrack(row + 1, col, board, visited, word, index + 1) ||
+        backTrack(row, col + 1, board, visited, word, index + 1)){
+            return true;
         }
          */
         int[] rowOffset = {0, 1, 0, -1};

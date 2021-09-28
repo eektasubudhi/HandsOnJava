@@ -8,9 +8,9 @@ public class PalindromeCheck {
        // String input = "taco act";
         String input = "aaaa   ab bc"; // if string can be palindrome or not
         PalindromeCheck pc = new PalindromeCheck();
-        System.out.println(pc.isPlaindrome(input));
+        System.out.println(pc.isPalindrome(input));
     }
-    public boolean isPlaindrome(String input){
+    public boolean isPalindrome(String input){
         //int =input.length();
         //for(string){ map(save the letter and its count)}
         //for(map){ if(count%2 !=0) oppCount++;}

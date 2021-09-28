@@ -28,7 +28,6 @@ public class MakeValidParentheses {
         for(int j = 0; j < s.length(); j++){
             if(!setForRemove.contains(j)) sd.append(s.charAt(j));
         }
-
         return sd.toString();
     }
 }

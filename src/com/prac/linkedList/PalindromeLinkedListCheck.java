@@ -39,7 +39,7 @@ public class PalindromeLinkedListCheck {
     public static void findMidNode(Node head){
         Node fstPtr = head;
         Node slwPtr = head;
-        while(fstPtr != null && fstPtr.next != null && fstPtr.next.next != null){
+        while(slwPtr != null && fstPtr != null && fstPtr.next != null){
             fstPtr = fstPtr.next.next;
             slwPtr = slwPtr.next;
         }

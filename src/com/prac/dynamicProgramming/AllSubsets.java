@@ -19,6 +19,7 @@ public class AllSubsets {
             }
             System.out.println("---");
         }
+
     }
 
     public List<List<Integer>> subsets(int[] nums) {
@@ -26,6 +27,7 @@ public class AllSubsets {
         for(k = 0; k < n + 1; k++){
             backtrack(0, new ArrayList<Integer>(), nums);
         }
+        //{1,2,3} -> {{1},{1,2},{1,2,3},{2},{2,3},{3}}
         return output;
     }
 

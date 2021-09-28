@@ -32,8 +32,9 @@ public class LowestCommonAncestor {
 
         LowestCommonAncestor obj = new LowestCommonAncestor();
         TreeNode result = obj.findLowestCommonAncestor(root, left, right);
-        System.out.println("Common ancestor : " +result.val);
+        System.out.println("Common ancestor of p and q: " +result.val);
     }
+
     public TreeNode findLowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q){
         if(root == null) return null;
         if(root == p || root == q) return root;

@@ -35,7 +35,7 @@ public class CheckIsLinkedListPalindrome {
             /*
             [10|]->[11|]->[12|]->[11|]->[10|]
              */
-        boolean isPalindrome=false;
+        boolean isPalindrome = false;
         Stack<Integer> st = new Stack<>();
             Node slow = headnode;
             while(slow != null){

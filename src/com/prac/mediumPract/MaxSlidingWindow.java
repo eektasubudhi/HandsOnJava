@@ -9,7 +9,7 @@ public class MaxSlidingWindow {
         int[] arr = {1,3,-1,-3,5,3,6,7};
         int k = 3;
         MaxSlidingWindow mx = new MaxSlidingWindow();
-        int[] result = mx.maxSlidingWindowNew(arr, k); //mx.maxSlidingWindow(arr, k);
+        int[] result = mx.maxSlidingWindow(arr, k);//mx.maxSlidingWindowNew(arr, k); //
         for(int i : result) System.out.println(i);
     }
     public int[] maxSlidingWindow(int[] nums, int k) {
