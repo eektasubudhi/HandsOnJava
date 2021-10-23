@@ -4,10 +4,10 @@ public class ExponentRecursion {
 
     public static void main(String[] args) {
         int base = 3;
-        int power = 5;
+        int power = -5;
         ExponentRecursion ex = new ExponentRecursion();
         System.out.println(ex.power(base,power));
-        System.out.println(ex.ourPower(base,power));
+        //System.out.println(ex.ourPower(base,power));
     }
 
     public int power(int base, int power){

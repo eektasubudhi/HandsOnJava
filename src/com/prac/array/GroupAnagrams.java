@@ -18,7 +18,7 @@ missed - scenarios - asking questions
 coding - latest
 
  */
-public class CoderPad1 {
+public class GroupAnagrams {
         static List<List<String>> result = new ArrayList<>();
 
         public static void main(String[] args) {

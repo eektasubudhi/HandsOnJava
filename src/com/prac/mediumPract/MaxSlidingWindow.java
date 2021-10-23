@@ -18,7 +18,7 @@ public class MaxSlidingWindow {
             int count = 1;
             int max = nums[i];
             int ind = i;
-            while(count<=k){
+            while(count <= k){
                 if(nums[ind]> max) max = nums[ind];
                 ind++;
                 count++;

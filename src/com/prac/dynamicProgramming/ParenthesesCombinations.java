@@ -6,8 +6,10 @@ public class ParenthesesCombinations {
     public static void main(String[] args) {
         int n = 4;
         char[] str = new char[n*2];
+
         ArrayList<String> result = new ArrayList<>();
         validParentheses(result, n, n, str, 0);
+
         for (String s : result) System.out.println(s);
     }
     public static void validParentheses(ArrayList<String> result, int leftN, int rightN, char[] str, int index){

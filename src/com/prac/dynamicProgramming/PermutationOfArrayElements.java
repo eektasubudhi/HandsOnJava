@@ -19,6 +19,7 @@ public class PermutationOfArrayElements {
 
     }
     public List<List<Integer>> getAllPermutations(int[] nums){
+
         List<List<Integer>> output = new ArrayList<>();
         for(int n  : nums) numList.add(n);
         backtrack(nums.length, output, numList, 0);
@@ -39,4 +40,5 @@ public class PermutationOfArrayElements {
         numList.set(index, numList.get(i));
         numList.set(i, temp);
     }
+
 }

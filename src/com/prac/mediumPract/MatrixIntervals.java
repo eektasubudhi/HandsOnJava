@@ -22,7 +22,7 @@ public class MatrixIntervals {
         //o/p ->
         MatrixIntervals obj = new MatrixIntervals();
         int[][] res = obj.merge(input);
-        for (int[] arr :res) {
+        for (int[] arr : res) {
             for(int i = 0; i < arr.length; i++){
                 System.out.println(arr[i]);
             }

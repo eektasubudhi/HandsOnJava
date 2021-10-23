@@ -26,7 +26,7 @@ public class KthLargestElementInArray {
         for(int i : arr){
             que.add(i);
             if(que.size() > kth){
-                que.poll();
+                System.out.println(que.poll());
             }
         }
         return que.poll();

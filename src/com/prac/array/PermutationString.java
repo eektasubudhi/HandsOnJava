@@ -8,9 +8,9 @@ public class PermutationString {
 // TODO Auto-generated method stub
         PermutationString permString = new PermutationString();
 
-        System.out.println(permString.checkPermString1("poAroo", "Arooop"));
+        System.out.println(permString.checkPermString1("ac", "bb"));
         //"bus", "sub", "ubs", "sbu", "bsu", "usb" -. 2 ways solve
-        System.out.println(permString.checkPermString2("Arooop", "oraopo"));
+        System.out.println(permString.checkPermString2("ac", "bb"));
 
     }
     public static boolean checkPermString1(String string1, String string2){

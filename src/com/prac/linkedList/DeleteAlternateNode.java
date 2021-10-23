@@ -55,7 +55,7 @@ public class DeleteAlternateNode {
         }
         return prev;
     }*/
-    public static void deleteAlternate(Node head){
+    /*public static void deleteAlternate(Node head){
         Node curr = head;
         while (curr != null && curr.next != null){
             //System.out.println(curr.data);
@@ -67,6 +67,23 @@ public class DeleteAlternateNode {
             head = head.next;
         }
 
-    }
+    }*/
+   public static void deleteAlternate(Node head){
+       Node curr = new Node(-1);
+       curr.next = head;
+       Node hd = head;
+
+       while (hd != null && hd.next != null){
+           //System.out.println(curr.data);
+           hd.next = hd.next.next;
+           hd = hd.next;
+       }
+       Node res = curr.next;
+       while(res != null){
+           System.out.println(res.data);
+           res = res.next;
+       }
+
+   }
 
 }

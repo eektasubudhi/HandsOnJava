@@ -6,20 +6,20 @@ import java.util.List;
 
 public class AllSubsets {
     List<List<Integer>> output = new ArrayList<>();
-
     int n, k;
+
     public static void main(String[] args) {
         int[] nums = {1, 3, 5};
 
         AllSubsets obj = new AllSubsets();
         List<List<Integer>> result = obj.subsets(nums);
+        //obj.subsets(nums);
         for(List<Integer> l : result) {
             for (Integer i : l){
                 System.out.println(i);
             }
             System.out.println("---");
         }
-
     }
 
     public List<List<Integer>> subsets(int[] nums) {

@@ -26,9 +26,7 @@ public class RoomsKeys {
     }
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
         int[] visited = new int[rooms.size()];
-            if(visited[0] == 0){
-                dfs(rooms, visited, 0);
-            }
+        dfs(rooms, visited, 0);
 
         for(int i : visited){
             if(i == 0) return false;

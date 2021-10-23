@@ -15,8 +15,8 @@ public class MaxOfTwoNum {
         resArr[0] = n1;
         resArr[1] = n2;
         Arrays.sort(resArr);
-        System.out.println("max of two num: "+resArr[1]);
-        System.out.println("min of two num: "+resArr[0]);
+        System.out.println("Max of two num: "+resArr[1]);
+        System.out.println("Min of two num: "+resArr[0]);
     }
     /*public static void maxOfTwo(int num1, int num2){
         NumberComparator cmp = new NumberComparator();

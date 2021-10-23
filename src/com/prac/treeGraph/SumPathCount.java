@@ -77,7 +77,6 @@ public class SumPathCount {
         if (node == null) return;
 
         curr += node.val;
-
         if(curr == target) count++;
 
         count += map.getOrDefault(curr - target, 0);

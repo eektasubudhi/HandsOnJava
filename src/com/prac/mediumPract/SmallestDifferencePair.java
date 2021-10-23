@@ -15,7 +15,7 @@ public class SmallestDifferencePair {
         Arrays.sort(arr2);
         int minDiff = Math.abs(arr1[0] - arr2[0]);
         int i = 0 ,j = 0;
-        while( i < arr1.length && j < arr2.length){
+        while (i < arr1.length && j < arr2.length){
                 int diff = Math.abs(arr1[i] - arr2[j]);
                 minDiff = Math.min(minDiff, diff);
                 if(arr1[i] < arr2[j]) i++;

@@ -7,9 +7,9 @@ public class BinarySearch {
         int high = bin.length-1;
         int low = 0;
         int index = binarySearchFun(bin, find, high, low);
-      //  int indexIter = binarySearchIter(bin, find, low, high);
+        //int indexIter = binarySearchIter(bin, find, low, high);
         System.out.println(index);
-      //  System.out.println(indexIter+"iter");
+        //System.out.println(indexIter+"iter");
     }
     public static int binarySearchFun(int[] bin, int find, int high, int low){
         int mid = (high+low)/2;

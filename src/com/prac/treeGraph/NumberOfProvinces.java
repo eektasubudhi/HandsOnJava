@@ -19,7 +19,7 @@ public class NumberOfProvinces {
         return count;
     }
     public void getConnectedProvinces(int[][] isConnected, int[] isVisited, int row){
-        for(int j = 0; j < isConnected.length; j++) { //{{1,1,0},{1,1,0},{0,0,1}}
+        for(int j = 0; j < isConnected[0].length; j++) { //{{1,1,0},{1,1,0},{0,0,1}}
             if (isConnected[row][j] == 1 & isVisited[j] == 0) {
                 isVisited[j] = 1;
                 getConnectedProvinces(isConnected, isVisited, j);

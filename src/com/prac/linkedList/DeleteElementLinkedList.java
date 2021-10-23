@@ -1,7 +1,7 @@
 package com.prac.linkedList;
 
 public class DeleteElementLinkedList {
-    static Node head;
+    //static Node head;
     static class Node{
         int data;
         Node next;
@@ -19,20 +19,21 @@ public class DeleteElementLinkedList {
         Node n4 = new Node(5);
         Node n5 = new Node(6);
 
-        head = n1;
+        //head = n1;
         n1.next = n2;
         n2.next = n3;
         n3.next = n4;
         n4.next = n5;
 
-        deleteElement(head,5);
+        Node head =  deleteElement(n1,5);
         //remove(5);
         while (head != null){
             System.out.println(head.data);
             head=head.next;
         }
     }
-    public static void deleteElement(Node curr, int m){
+    /*public static Node deleteElement(Node curr, int m){
+        Node h = curr;
         Node res = null;
         while (curr != null){
             if(curr.data == m){
@@ -41,10 +42,26 @@ public class DeleteElementLinkedList {
             else res = curr;
             curr = curr.next;
         }
+        return h;
+    }*/
+    //Looi's experiment
+    public static Node deleteElement(Node curr, int m){
+        Node h = new Node(-1);
+        h.next = curr;
+        Node res = h, hd = curr;
+
+        while (hd != null){
+            if(hd.data == m){
+                res.next = hd.next;
+            }
+            else res = hd;
+            hd = hd.next;
+        }
+        return h.next;
     }
 
 
-    public static void remove(int key)
+    /*public static void remove(int key)
     {
         if(head == null) throw new RuntimeException("cannot delete");
 
@@ -67,5 +84,5 @@ public class DeleteElementLinkedList {
 
         //delete cur node
         prev.next = cur.next;
-    }
+    }*/
 }

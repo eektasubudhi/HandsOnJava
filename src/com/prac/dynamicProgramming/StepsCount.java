@@ -2,7 +2,7 @@ package com.prac.dynamicProgramming;
 
 public class StepsCount {
     public static void main(String[] args) {
-        int n = 10;
+        int n = 2;
         int probability = countSteps(n);
         System.out.println(probability+" : recursion without memo");
 
@@ -22,7 +22,7 @@ public class StepsCount {
             return memo[n];
         }
         else{
-            memo[n] = memoCountSteps(n-1, memo) + memoCountSteps(n-2, memo) + memoCountSteps(n-3, memo);
+                memo[n] = memoCountSteps(n-1, memo) + memoCountSteps(n-2, memo) + memoCountSteps(n-3, memo);
             return memo[n];
         }
     }

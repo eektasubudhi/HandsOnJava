@@ -16,9 +16,9 @@ public class MyQueue {
     public void enQueue(int i){
         st1.push(i);
     }
-    public int deQueue(){
-        if(st2.isEmpty()){
-            while (!st1.isEmpty()){
+    public int deQueue() {
+        if (st2.isEmpty()) {
+            while (!st1.isEmpty()) {
                 st2.push(st1.pop());
             }
         }
