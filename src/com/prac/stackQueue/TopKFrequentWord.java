@@ -13,8 +13,8 @@ public class TopKFrequentWord {
     }
     public List<String> getMostFrequentWords(String[] words, int k){
         List<String> output = new ArrayList<>();
-        if(words.length == 0 || words.length < k) return output;
-        if(words.length == 1) return Arrays.asList(words);
+        //if(words.length == 0) return output;
+        if(words.length < k) return Arrays.asList(words);
 
         HashMap<String, Integer> wordMap = new HashMap<>();
 

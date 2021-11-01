@@ -22,7 +22,6 @@ public class AllPathFromSourceToDestination {
     }
 
     public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
-        int[] visited = new int[graph[0].length];
         if(graph == null ||graph.length == 0){
             return result;
         }

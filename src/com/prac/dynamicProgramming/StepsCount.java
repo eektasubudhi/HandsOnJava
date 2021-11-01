@@ -22,7 +22,7 @@ public class StepsCount {
             return memo[n];
         }
         else{
-                memo[n] = memoCountSteps(n-1, memo) + memoCountSteps(n-2, memo) + memoCountSteps(n-3, memo);
+            memo[n] = memoCountSteps(n-1, memo) + memoCountSteps(n-2, memo) + memoCountSteps(n-3, memo);
             return memo[n];
         }
     }

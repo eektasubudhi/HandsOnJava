@@ -1,6 +1,7 @@
 package com.prac.array;
 
 public class StringCompressNew {
+    static char[] chars = {'a','a','b','b','c','c','c'};
     public static void main(String[] args) {
         String input = "jggffrrrr"; //output - j1g2f2r4
 
@@ -9,9 +10,9 @@ public class StringCompressNew {
 
         System.out.println("------------------====-------------------");
 
-        char[] chars = {'a','a','b','b','c','c','c'}; // o/p -> {'a','2','b','2','c','3'};
-        char[] outputNew = CompressTheStringNewLeet(chars);
-        for(char c: outputNew) System.out.println(c);
+          // o/p -> {'a','2','b','2','c','3'};
+        int outputNew = CompressTheStringNewLeet(chars);
+        for(char c: chars) System.out.println(c);
     }
     public static String CompressTheString(String input){
         StringBuilder sd = new StringBuilder();
@@ -29,35 +30,23 @@ public class StringCompressNew {
         sd.append(String.valueOf(charCount));
         return sd.toString();
     }
-    public static char[] CompressTheStringNewLeet(char[] input) {
-        StringBuilder sd = new StringBuilder();
-        //{'a','a','b','b','c','c','c'};
-        int count = 1;
-        int i = 0;
-        for(; i < input.length - 1; i++){
-            if(input[i] == input[i + 1]) {
+    public static int CompressTheStringNewLeet(char[] chars) {
+        int i = 0, newLength = 0;
+        while (i < chars.length) {
+            char currentChar = chars[i];
+            int count = 0;
+            while (i < chars.length && chars[i] == currentChar) {
+                i++;
                 count++;
             }
-            else{
-                sd.append(input[i]);
-                while(count > 0){
-                    sd.append(count % 10);
-                    count = count / 10;
+            chars[newLength++] = currentChar;
+            if (count > 1) {
+                for (char c : String.valueOf(count).toCharArray()) {
+                    chars[newLength++] = c;
                 }
-                count = 1;
             }
         }
-        sd.append(input[i]);
-        while(count > 0){
-            sd.append(count % 10);
-            count = count / 10;
-        }
-        System.out.println(sd.toString());
-        input = new char[sd.length()];
-        for(int index = 0; index < sd.length(); index++){
-            input[index] = sd.toString().charAt(index);
-        }
-        return input;
+        return newLength;
     }
 
 }
