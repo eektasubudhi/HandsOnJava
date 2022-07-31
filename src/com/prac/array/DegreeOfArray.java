@@ -6,10 +6,10 @@ import java.util.Map;
 public class DegreeOfArray {
     public static void main(String[] args) {
         int[] arr = {1,2,2,3,1};
-        int res = findMinLenghtOfSubArrayWithSameDegree(arr);
+        int res = findMinLengthOfSubArrayWithSameDegree(arr);
         System.out.println("Smallest possible length of a (contiguous) subarray of arr, that has the same degree as arr is: " + res);
     }
-    public static int findMinLenghtOfSubArrayWithSameDegree(int[] arr){
+    public static int findMinLengthOfSubArrayWithSameDegree(int[] arr){
         Map<Integer, Integer> map = new HashMap<>();
         int degree = 1;
 

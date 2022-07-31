@@ -4,8 +4,8 @@ import java.util.Stack;
 
 public class balancedWithFlip {
     public static void main(String[] args) {
-        String input = "}}}}{}";
-        // {{{} -> 1  }}{{  //{{{{ } //}}}  // { } // }{ // }{{
+        String input = "}}}{}{{{";//"}}}}{}";
+        // {{{} -> 1  }}{{  //{{{{ } //}}}  // { } // }{ // }}{{ // }}}{}{{{
         int cnt = isBalanced(input);
         System.out.println(cnt);
     }

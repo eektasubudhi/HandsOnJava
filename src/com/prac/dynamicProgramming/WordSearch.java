@@ -7,7 +7,7 @@ public class WordSearch {
         char[][] board = {{'A','B','C','E'},
                           {'S','F','C','S'},
                           {'A','D','E','E'}};
-        String word = "ABCCFS";
+        String word = "ABCCF";
         WordSearch obj = new WordSearch();
         boolean res = obj.findWord(board, word);
         System.out.println(res);
@@ -32,14 +32,14 @@ public class WordSearch {
             return false;
         }
         visited[row][col] = true;
-        /*
-        if (backTrack(row - 1, col, board, visited, word, index + 1) ||
-        backTrack(row, col - 1, board, visited, word, index + 1) ||
-        backTrack(row + 1, col, board, visited, word, index + 1) ||
-        backTrack(row, col + 1, board, visited, word, index + 1)){
+
+        if (backTrack(board, visited, row - 1, col, word, index + 1) ||
+        backTrack(board, visited, row, col - 1, word, index + 1) ||
+        backTrack(board, visited, row + 1, col, word, index + 1) ||
+        backTrack(board, visited, row, col + 1, word, index + 1)){
             return true;
         }
-         */
+        /*
         int[] rowOffset = {0, 1, 0, -1};
         int[] colOffset = {1, 0, -1, 0};
 
@@ -47,7 +47,7 @@ public class WordSearch {
             if (backTrack(board, visited, row + rowOffset[d], col + colOffset[d], word,index + 1)){
                 return true;
             }
-        }
+        }*/
         visited[row][col] = false;
         return false;
     }

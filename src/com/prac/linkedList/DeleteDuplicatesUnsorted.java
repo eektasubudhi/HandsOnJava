@@ -43,7 +43,6 @@ public class DeleteDuplicatesUnsorted {
             countMap.put(temp.val, countMap.getOrDefault(temp.val, 0) + 1);
             temp = temp.next;
         }
-
         ListNode curr = new ListNode(-1);
         curr.next = head;
         ListNode prev = curr, post = head;
@@ -54,10 +53,8 @@ public class DeleteDuplicatesUnsorted {
             }else{
                 prev = post;
             }
-
             post = post.next;
         }
-
         return curr.next;
     }
 }
